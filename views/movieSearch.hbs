@@ -1,0 +1,28 @@
+<body id="search-container">
+
+  <img src="/images/framedBrandonVito.png" alt="" class="search-img">
+
+  <div class="search-title">
+    What movie are you looking for?
+  </div>
+
+  <form method="POST" action="/movie-search">
+
+    <input placeholder="Enter search..." name="searchMovie" id="search-field">
+    <button id="search-button">Search</button>
+
+  </form>
+
+
+  <div class="movie-container">
+  {{#each showMovies}}
+    <h2 id="movie-title">Title : {{this.title}} </h2>
+    <h3>Year : {{this.year}} </h3>
+    <h3>Director : {{this.director}} </h3>
+    <h3>Duration : {{this.duration}} </h3>
+    <h3>Genre : {{this.genre}} </h3>
+    <h3>Rating : {{this.rate}} </h3>
+  {{/each}}
+  </div>
+
+</body> 

@@ -1,0 +1,48 @@
+<body>
+
+<img src="images/framedMonroe.png" alt="" class="signup-img">
+
+<div id="signup-container">
+
+  <div class="signup-title">
+    Sign Up
+  </div>
+
+  <form id="form" action="/signup" method="POST">
+
+    <div class="signup-fields">
+        <input type="text" placeholder="Enter username" name="username" id="signup-field">
+    </div>
+
+    <div class="signup-fields">
+        <input type="password" placeholder="Enter password" id="myInput">
+    </div>
+
+<div id="checkbox-psw">
+    <input type="checkbox" onclick="myFunction()">Show Password
+
+    <script>
+  function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+  }
+  </script>
+</div>
+
+    <div class="signup-button">
+        <button id="signup-button">Create account</button>
+    </div>
+
+    {{#if errorMessage}}
+      <div class="signup-title">{{ errorMessage }}</div>
+    {{/if}}
+
+  </form>
+
+</div> 
+
+</body>

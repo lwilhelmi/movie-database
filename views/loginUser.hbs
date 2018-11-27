@@ -1,0 +1,37 @@
+<body>
+  
+  <img src="images/framedDean.png" alt="" class="login-img">
+
+<div id="login-container">
+
+  <div class="login-title">
+    Login
+  </div>
+
+  <form action="/login" method="POST" id="form">
+
+    <div class="login-fields">
+      <input placeholder="Enter username" type="text" name="username" id="login-field">
+    </div>
+
+    <div class="login-fields">
+      <input placeholder="Enter password" type="password" name="password" id="login-field">
+    </div>
+
+      {{#if errorMessage }}
+    <div class="error-message">{{ errorMessage }}</div>
+      {{/if}}
+
+    <div class="login-button">
+      <button id="login-button">Login</button>
+    </div>
+
+    <div class="signup-link">
+      <a id="signup-link" href="/signup" >Sign up here</a>
+    </div>
+
+  </form>
+
+</div> 
+
+</body>
